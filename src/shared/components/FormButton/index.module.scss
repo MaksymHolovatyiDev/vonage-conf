@@ -1,0 +1,13 @@
+@import "@/assets/styles/_colors";
+@import "@/assets/styles/_typography";
+
+
+.button{
+    @include font-button1($white);
+
+    min-height: 40px;
+
+    background-color: $system-blue;
+
+    border-radius: 6px;
+}

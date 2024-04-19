@@ -1,0 +1,70 @@
+@import "@/assets/styles/_typography";
+@import "@/assets/styles/_colors";
+@import "@/assets/styles/_breakpoints";
+
+.label{
+    display: none;
+
+    @media screen and (min-width: $mediaWidthMD) {
+        @include font-minimal1($black-light);
+
+        display: block;
+
+        padding: 0 16px;
+        margin-bottom: 8px;
+
+        cursor: pointer;
+    }
+}
+
+.container{
+    position: relative;
+
+    margin-bottom: 12px;
+
+    @media screen and (min-width: $mediaWidthMD) {
+        margin-bottom: 16px;
+    }
+}
+
+.button{
+    position: absolute;
+    top: 50%;
+    right: 8px;
+
+    line-height: 0;
+
+    background-color: transparent;
+
+    border: 0;
+    padding: 0;
+
+    transform: translateY(-50%);
+
+    &:hover, &:focus{
+        outline: none;
+    }
+
+    &--transparent{
+        opacity: 50%;
+    }
+}
+
+.input{
+    min-height: 48px;
+    width: 100%;
+
+    color: $black;
+    background-color: $black-light-22;
+
+    border: 1px solid $black-light-82;
+    border-radius: 6px;
+    padding: 14px 16px;
+    padding-right: 44px;
+
+    outline: none;
+
+    &--error{
+        border: 1px solid $red;
+    }
+}

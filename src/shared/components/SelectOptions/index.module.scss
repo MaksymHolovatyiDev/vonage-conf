@@ -1,0 +1,50 @@
+@import "@/assets/styles/_colors";
+
+.select-options {
+    position: absolute;
+    z-index: 10;
+
+    width: 100%;
+
+    border-radius: 8px;
+
+    overflow: hidden;
+
+    &__option {
+      position: relative;
+
+
+        list-style-type: none;
+        padding: 6px 20px;
+        background: $grey-dark-2;
+
+        padding: 16px 8px;
+
+        cursor: pointer;
+
+        &:not(:last-child){
+            border-bottom: 1px solid $grey-3;
+        }
+
+        &:hover {
+            background-color: $grey-dark;
+          }
+
+        &--active{
+            background-color: $grey-3;
+
+            padding-right: 44px;
+
+            text-overflow: ellipsis;
+            text-wrap: nowrap;
+            overflow: hidden;
+        }
+      }
+      &__ico{
+        position: absolute;
+        top: 50%;
+        right: 16px;
+
+        transform: translateY(-50%);
+      }
+  }

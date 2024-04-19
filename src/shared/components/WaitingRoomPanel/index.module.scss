@@ -1,0 +1,122 @@
+@import "@/assets/styles/_colors";
+@import "@/assets/styles/_breakpoints";
+
+.panel{
+    &__container{
+        &--base{
+            width: 100%;
+
+            position: relative;
+            z-index: 1;
+            
+            // display: flex;
+            // justify-content: space-between;
+
+            background-color: $black-full;
+
+            border-radius: 16px 16px 0 0;
+            padding: 16px;
+            padding-bottom: 32px;
+
+            @media screen and (min-width: $mediaWidthMD) {
+                gap: 8px;
+
+                padding: 16px 0;
+            }
+        }
+
+        &--options{
+            display: flex;
+            justify-content: space-between;
+
+            margin-bottom: 16px;
+
+            &-list{
+                display: flex;
+                gap: 8px;
+
+                @media screen and (min-width: $mediaWidthMD) {
+                    gap: 16px;
+                }
+            }
+        }
+
+        &--button-options{
+            position: relative;
+
+            display: flex;
+        }
+
+        &--select-list{
+            display: none;
+
+            @media screen and (min-width: $mediaWidthMD) {
+                position: absolute;
+                left: 0;
+                bottom: -8px;
+
+                display: block;
+    
+                background-color: transparent;
+    
+                width: 344px;
+            }
+        }
+    }
+
+    &__button{
+        &--image{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            background-color: transparent;
+
+            border: 1px solid $black-light;
+            padding: 8px;
+
+            & > svg {
+                height: 24px;
+                width: 24px;
+            }
+        }
+
+        &--mobile{
+            @media screen and (min-width: $mediaWidthMD) {
+                display: none;
+            }
+        }
+
+        &--desktop{
+            display: none;
+            @media screen and (min-width: $mediaWidthMD) {
+                display: flex;
+            }
+        }
+
+        &--splitted{
+            &-left{
+                background-color: $grey-3;
+
+                border-top-right-radius: 0;
+                border-bottom-right-radius: 0;
+            }
+
+            &-right{
+                background-color: $grey-3;
+
+                border-left: 1px solid $black;
+                border-top-left-radius: 0;
+                border-bottom-left-radius: 0;
+            }
+        }
+    }
+
+    &__desktop{
+        &--hidden{
+            @media screen and (min-width: $mediaWidthMD) {
+                display: none;
+            }
+        }
+    }
+}

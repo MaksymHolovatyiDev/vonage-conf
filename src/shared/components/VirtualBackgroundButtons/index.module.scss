@@ -1,0 +1,27 @@
+@import "@/assets/styles/_colors";
+
+.virtual-background-buttons{
+    &__buttons-list{
+        display: flex;
+        gap: 16px;
+
+        & > li {
+            flex: 1 1 0;
+        }
+    }
+
+    &__filter-btn{
+        width: 100%;
+
+        background-color: $grey-dark-2;
+
+        border-radius: 10px;
+        padding: 13px 0;
+        margin-bottom: 8px;
+
+        & > svg {
+            height: 40px;
+            width: 40px;
+        }
+    }
+}

@@ -1,0 +1,30 @@
+@import "@/assets/styles/_colors";
+
+.main{
+    height: 100vh;
+    width: 100vw;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: $grey-dark;
+}
+
+.input{
+    color: $cream !important;
+}
+
+.container{
+    flex-direction: row !important;
+    gap: 30px;
+}
+
+.button{
+    font-weight: bold !important;
+
+    &__create-room{
+        background-color: $blue !important;
+        color: $white !important;
+    }
+}

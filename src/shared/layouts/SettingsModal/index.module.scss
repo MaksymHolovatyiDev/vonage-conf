@@ -1,0 +1,122 @@
+@import "@/assets/styles/_colors";
+@import "@/assets/styles/_typography";
+@import "@/assets/styles/_breakpoints";
+
+.modal{
+    display: none;
+
+    @media screen and (min-width: $mediaWidthMD) {
+        display: block;
+    }
+}
+
+.settings{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    height: 656px;
+    width: 782px;
+    max-width: 90vw;
+
+    display: flex;
+    justify-content: flex-end;
+
+    background-color: $black-3;
+
+    border-radius: 4px;
+
+    transform: translate(-50%, -50%);
+
+    &__header{
+        @include font_inter_headline1($white);
+
+        margin-bottom: 24px;
+    }
+
+    &__options{
+        flex-grow: 1;
+
+        padding: 40px 24px 24px;
+
+        &-list{
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        &-button{
+            @include font_inter_text1($grey);
+
+            width: 100%;
+
+            display: flex;
+            align-items: center;
+            gap: 16px;
+
+            background-color: transparent;
+
+            padding: 16px;
+
+            &--active{
+                @include font_inter_subtitle1($cream);
+
+
+                background-color: $black-2;
+            }
+        }
+    }
+}
+
+.tab{
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+
+    flex-basis: 66.666%;
+
+    background-color: $black-2;
+
+    padding: 32px;
+
+    &__header{
+        @include font_inter_headline2($cream);
+    }
+
+    &__container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &--micro{
+            display: flex;
+            align-items: center;
+            gap: 8px;
+
+            &-level{
+                display: flex;
+                align-items: center;
+                gap: 8px;
+
+                margin-top: 16px;
+            }
+        }
+        &--speakers{
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+    }
+
+    &__button{
+        &--close{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            background-color: transparent;
+
+            padding: 0;
+        }
+    }
+}
