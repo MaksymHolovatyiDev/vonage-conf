@@ -1,0 +1,36 @@
+@import "@/assets/styles/_typography";
+@import "@/assets/styles/_colors";
+@import "@/assets/styles/_breakpoints";
+
+.login{
+    &__form{
+        display: flex;
+        flex-direction: column;
+
+        &--remember{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            margin-bottom: 32px;
+
+            @media screen and (min-width: $mediaWidthMD) {
+                margin-top: 4px;
+            }
+        }
+
+        &--text{
+            @include font-text1($system-blue);
+        }
+    }
+
+    &__sign_up{
+        @include font-text1($black);
+
+        margin: 0 auto;
+
+        &--text{
+            color: $system-blue;
+        }
+    }
+}

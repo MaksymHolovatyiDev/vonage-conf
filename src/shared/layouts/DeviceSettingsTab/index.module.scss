@@ -1,0 +1,67 @@
+@import "@/assets/styles/_colors";
+@import "@/assets/styles/_typography";
+
+.device-settings-tab{
+    &__title{
+        @include font_inter_text1($cream);
+
+        margin-bottom: 8px;
+    }
+
+    &__list{
+        display: flex;
+        flex-direction: column;
+        gap: 33px;
+    }
+
+    &__ico{
+        height: 24px;
+        width: 24px;
+    }
+
+    &__container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &--micro{
+            display: flex;
+            align-items: center;
+            gap: 8px;
+
+            &-level{
+                display: flex;
+                align-items: center;
+                gap: 8px;
+
+                margin-top: 16px;
+            }
+        }
+        &--speakers{
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+    }
+
+    &__button{
+        &--audio{
+            display: flex;
+            align-items: center;
+            gap: 8px;
+
+            background-color: $grey-2;
+
+            padding: 12px 16px;
+        }
+        &--close{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            background-color: transparent;
+
+            padding: 0;
+        }
+    }
+}

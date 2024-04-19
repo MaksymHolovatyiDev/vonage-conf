@@ -1,0 +1,106 @@
+@import "@/assets/styles/_colors";
+@import "@/assets/styles/_breakpoints";
+@import "@/assets/styles/_typography";
+
+.top-panel{
+    &__container{
+        &--info{
+            width: 100%;
+
+            position: relative;
+            z-index: 1;
+    
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 16px;
+
+            background: linear-gradient($black-full 0%, rgba(0, 0, 0, 0) 100%);
+
+            padding-top: 24px;
+
+            @media screen and (min-width: $mediaWidthMD) {
+                gap: 40px;
+
+                // background: $black-full;
+
+                padding: 0;
+                padding-bottom: 40px;
+            }
+        }
+
+        &--titles{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 4px;
+
+            @media screen and (min-width: $mediaWidthMD) {
+                gap: 8px;
+            }
+        }
+    }
+
+    &__text{
+        &--title{
+            @include font_inter_headline1($cream);
+
+            @media screen and (min-width: $mediaWidthMD) {
+                font-size: 34px;
+                line-height: 1.17;
+            }
+        }
+
+        &--sub-title{
+            @include font_inter_text1($grey);
+
+            @media screen and (min-width: $mediaWidthMD) {
+                font-size: 16px;
+                line-height: 2.5;
+            }
+        }
+
+        &--users{
+            @include font_inter_subtitle1($grey);
+
+            background-color: $black-2;
+
+            border-radius: 30px;
+            padding: 10px 16px;
+        }
+        
+        &--live{
+            @include font_inter_subtitle1($white);
+            text-transform: uppercase;
+        }
+    }
+}
+
+.live{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    &__circle{
+        height: 14px;
+        width: 14px;
+
+        background-color: $white;
+
+        border-radius: 50%;
+    }
+
+    &__label{
+        display: none;
+
+        @media screen and (min-width: $mediaWidthMD) {
+            display: flex;
+
+            background-color: $red-dark;
+
+            border-radius: 20px;
+            padding: 10px 12px;
+        }
+    }
+}

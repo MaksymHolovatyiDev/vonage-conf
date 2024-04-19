@@ -1,0 +1,32 @@
+@import "@/assets/styles/_typography";
+@import "@/assets/styles/_colors";
+
+
+.register{
+    &__form{
+        display: flex;
+        flex-direction: column;
+
+        &--remember{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            margin-bottom: 32px;
+        }
+
+        &--text{
+            @include font-text1($system-blue);
+        }
+    }
+
+    &__sign_in{
+        @include font-text1($black);
+
+        margin: 0 auto;
+
+        &--text{
+            color: $system-blue;
+        }
+    }
+}

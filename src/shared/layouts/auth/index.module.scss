@@ -1,0 +1,94 @@
+@import "@/assets/styles/_typography";
+@import "@/assets/styles/_colors";
+@import "@/assets/styles/_breakpoints";
+
+.auth{
+    height: 100vh;
+    width: 100vw;
+
+    display: flex;
+    justify-content: center;
+
+    &__bg{
+        @media screen and (min-width: $mediaWidthMD) {
+            flex-grow: 1;
+
+            background-image: url("/src//assets//images/login-bg.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    }
+
+    &__container{
+        max-width: 458px;
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        
+        padding: 24px 15px;
+
+        overflow: auto;
+
+        @media screen and (min-width: $mediaWidthMD) {
+            flex-direction: column-reverse;
+            justify-content: flex-end;
+
+            padding: 48px;
+        }
+
+        &--inner{
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+    }
+
+    &__logo-wrapper{
+        display: flex;
+        gap: 8px;
+        justify-content: center;
+        align-items: center;
+
+        margin-top: 45px;
+
+        @media screen and (min-width: $mediaWidthMD) {
+            justify-content: flex-start;
+            gap: 16px;
+
+            margin: 0;
+        }
+    }
+
+    &__logo{
+        height: 40px;
+        width: 40px;
+
+        @media screen and (min-width: $mediaWidthMD) {
+            height: 48px;
+            width: 48px;
+        }
+
+        &--text{
+            @include font-headline1($black);
+        }
+    }
+
+    &__greeting--text{
+        @include font-headline2($black);
+    }
+
+    &__navigation{
+
+        &--container{
+            @include font-text1($black);
+            
+            margin: 0 auto;
+        }
+
+        &--text{
+            color: $system-blue;
+        }
+    }
+}

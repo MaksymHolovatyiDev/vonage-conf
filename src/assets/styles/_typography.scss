@@ -1,0 +1,49 @@
+@mixin font_headline1($color) {
+    font: 700 20px "Poppins";
+    color: $color;
+}
+@mixin font_headline2($color) {
+    font: 700 28px "Poppins";
+    color: $color;
+}
+@mixin font_inter_headline1($color){
+    font: 600 24px "Inter";
+    line-height: 1.33;
+    color: $color;
+}
+@mixin font_inter_headline2($color){
+    font: 600 20px "Inter";
+    line-height: 1.2;
+    color: $color;
+}
+
+@mixin font_inter_subtitle1($color){
+    font: 600 14px "Inter";
+    line-height: 1.43;
+    color: $color;
+}
+@mixin font_inter_subtitle2($color){
+    font: 600 16px "Inter";
+    line-height: 1.5;
+    color: $color;
+}
+
+@mixin font_button1($color) {
+    font: 700 15px "Roboto";
+    color: $color;
+}
+
+@mixin font_text1($color) {
+    font: 400 16px "SF Pro Display";
+    color: $color;
+}
+@mixin font_inter_text1($color) {
+    font: 400 14px "Inter";
+    line-height: 1.42;
+    color: $color;
+}
+
+@mixin font_minimal1($color) {
+    font: 400 11px "SF Pro Display";
+    color: $color;
+}
